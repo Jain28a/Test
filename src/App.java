@@ -6,9 +6,18 @@ import java.util.List;
 public class App {
     public static void main(String[] args) throws Exception {
         try {
-            
+            // Iterate over ArrayList using For Each
+                ArrayList<Employee> localEmployee = new ArrayList<>();
+                localEmployee.add(new Employee (12, "Aparna Jain"));
+                localEmployee.add(new Employee (21, "Atharva Jain"));
+                localEmployee.add(new Employee (3, "Arnav Jain"));
+                
+                System.out.print("Employee information:  \n");
+                for (Employee ie: localEmployee) {
+                    System.out.println("Employee Id : " + ie.empId + " Name:  " + ie.empName);
+                }
+
             // Print reverse Array
-            
                 int[] firstArray = {3,6,9,12,15,18,21,24,27,30};
                 printArray(firstArray);
                 System.out.print("Reversed Array is ");
@@ -72,6 +81,9 @@ public class App {
             list1.add(2);
             list1.add(9);
 
+            //Replacing element present at 0th index with 40
+            list1.set(2,11);
+
             List<Integer> list2 = new ArrayList<>();
             list2.add(7);
             list2.add(3);
@@ -104,18 +116,18 @@ public class App {
 
             for(int counter=0; counter  < old.size(); counter ++)
             {
-                if (old.get(counter).empid == newList.get(counter).empid)
+                if (old.get(counter).empId == newList.get(counter).empId)
                 {
-                    if (old.get(counter).empname == newList.get(counter).empname)
+                    if (old.get(counter).empName == newList.get(counter).empName)
                     {
-                        if (old.get(counter).departmentid != newList.get(counter).departmentid)
-                        {   System.out.println("For "  + newList.get(counter).empname + " Department has Changed ! ");
+                        if (old.get(counter).departmentId != newList.get(counter).departmentId)
+                        {   System.out.println("For "  + newList.get(counter).empName + " Department has Changed ! ");
                         }
                     }
                 }
                 else
-                {   System.out.println("For "  + old.get(counter).empname + " Employee Terminated ! ");
-                    System.out.println("For "  + newList.get(counter).empname + " New Employee ! ");
+                {   System.out.println("For "  + old.get(counter).empName + " Employee Terminated ! ");
+                    System.out.println("For "  + newList.get(counter).empName + " New Employee ! ");
                 }
             }
         }
@@ -130,7 +142,7 @@ public class App {
         for (int counter =0; counter < listname.size(); counter++)
         {
             Employee e = listname.get(counter);
-            System.out.print( "Employee Id : " + e.empid + " Employee Name : " + e.empname +  " Department Id :  "+ e.departmentid  + "\n");
+            System.out.print( "Employee Id : " + e.empId + " Employee Name : " + e.empName +  " Department Id :  "+ e.departmentId  + "\n");
         }
      }
 }
