@@ -8,30 +8,31 @@ public class App {
         try {
             
             // Print reverse Array
-            int[] firstArray = {3,6,9,12,15,18,21,24,27,30};
-            printArray(firstArray);
-            System.out.print("Reversed Array is ");
-            reverseArray(firstArray);
-            System.out.print("Reversed Array is ");
-            printArray(firstArray);
+            
+                int[] firstArray = {3,6,9,12,15,18,21,24,27,30};
+                printArray(firstArray);
+                System.out.print("Reversed Array is ");
+                reverseArray(firstArray);
+                System.out.print("Reversed Array is ");
+                printArray(firstArray);
 
             //Get 2 List of integers , merge and sort 
-            listMergeAndSort();
+                listMergeAndSort();
 
             //Find Differential along with its event lype - 2 Lists of Employee object
             // if department was changed then print "Department Changed" if new entry is found then "New Employee" and
             // if missing entry in the new collection then "Employee Terminated"
-            findDifferential();
+                findDifferential();
 
             //Sort Employee object based on Accessding Employee ID 
-            List<Employee> globalEmployee = Arrays.asList(
-                new Employee (12, "Aparna Jain", 2),
-                new Employee (21, "Atharva Jain", 3),
-                new Employee (3, "Arnav Jain", 4)
-            );
+                List<Employee> globalEmployee = Arrays.asList(
+                    new Employee (12, "Aparna Jain", 2),
+                    new Employee (21, "Atharva Jain", 3),
+                    new Employee (3, "Arnav Jain", 4)
+                );
 
-            sortEmployeeList(globalEmployee);
-            printList(globalEmployee);
+                sortEmployeeList(globalEmployee);
+                printList(globalEmployee);
             } 
             catch (Exception e) { 
                 System.out.print(e.getMessage() + e.getStackTrace());
